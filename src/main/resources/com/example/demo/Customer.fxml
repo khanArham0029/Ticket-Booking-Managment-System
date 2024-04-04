@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.demo.CustomerController"
+            prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #f0f8ff;">
+
+    <!-- Main layout -->
+    <VBox>
+        <!-- Top Toolbar with welcome message and search bar -->
+        <ToolBar>
+            <HBox>
+                <Label text="Welcome Customer!" style="-fx-text-fill: #008080; -fx-font-size: 16px; -fx-font-weight: bold;"/>
+                <TextField promptText="Search" style="-fx-pref-width: 150px;"/>
+            </HBox>
+        </ToolBar>
+
+        <!-- Sidebar with toggle button -->
+        <HBox>
+            <VBox spacing="20" style="-fx-background-color: #34495e; -fx-pref-width: 150px;">
+
+                <ToolBar>
+                    <ToggleButton text="☰" onAction="#onToggleSidebar" style="-fx-background-color: #2c3e50; -fx-text-fill: #ffffff; -fx-font-weight: bold; -fx-font-size: 18px; -fx-pref-width: 50px;"/>
+                </ToolBar>
+
+                <!-- Add other options in the sidebar as needed -->
+                <Button text="Settings" style="-fx-background-color: #2c3e50; -fx-text-fill: #ffffff; -fx-font-weight: bold; -fx-font-size: 14px; -fx-pref-width: 150px; -fx-pref-height: 40px;" />
+
+                <Button text="Logout" onAction="#onLogoutClick" style="-fx-background-color: #c0392b; -fx-text-fill: #ffffff; -fx-font-weight: bold; -fx-font-size: 14px; -fx-pref-width: 150px; -fx-pref-height: 40px;" />
+
+            </VBox>
+
+            <!-- Content Area -->
+            <VBox alignment="CENTER" spacing="20">
+
+                <VBox spacing="20">
+                    <Button text="Ticket Booking" onAction="#onTicketBookingClick" style="-fx-background-color: #3498db; -fx-text-fill: #ffffff; -fx-font-weight: bold; -fx-font-size: 14px; -fx-pref-width: 150px; -fx-pref-height: 40px;" />
+                    <Button text="View Booking History"  onAction="#onViewBookingHistoryClick"  style="-fx-background-color: #2ecc71; -fx-text-fill: #ffffff; -fx-font-weight: bold; -fx-font-size: 14px; -fx-pref-width: 150px; -fx-pref-height: 40px;" />
+                </VBox>
+
+                <VBox spacing="20">
+                    <Button text="Feedback and Rating" onAction="#onFeedbackAndRatingsClick" style="-fx-background-color: #e74c3c; -fx-text-fill: #ffffff; -fx-font-weight: bold; -fx-font-size: 14px; -fx-pref-width: 150px; -fx-pref-height: 40px;" />
+                    <Button text="Cancel Booking" onAction="#onCancelBookingClick" style="-fx-background-color: #f39c12; -fx-text-fill: #ffffff; -fx-font-weight: bold; -fx-font-size: 14px; -fx-pref-width: 150px; -fx-pref-height: 40px;" />
+                </VBox>
+
+            </VBox>
+        </HBox>
+    </VBox>
+</AnchorPane>
